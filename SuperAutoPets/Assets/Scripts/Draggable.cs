@@ -1,11 +1,10 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-// Exige que o GameObject tenha um CanvasGroup para controlarmos o Raycast
 [RequireComponent(typeof(CanvasGroup))]
 public class Draggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
-    [HideInInspector] public Transform parentAfterDrag;
+    [HideInInspector] public Transform parentAfterDrag; // O slot para onde ele vai
     private CanvasGroup canvasGroup;
 
     private void Awake()
@@ -15,33 +14,28 @@ public class Draggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        // 1. Salva o slot original caso o jogador solte o pet num lugar inválido
+        // 1. Antes de começar, ele salva o slot atual (Loja) como destino padrão
         parentAfterDrag = transform.parent;
 
-        // 2. Move o pet para a raiz do Canvas para ele não renderizar atrás de outros painéis
         transform.SetParent(transform.root);
-        transform.SetAsLastSibling(); // Garante que fique por cima de toda a UI
-
-        // 3. Desativa o bloqueio de raycast. Isso permite que o mouse "atravesse" o pet e detecte o slot abaixo dele
+        transform.SetAsLastSibling();
         canvasGroup.blocksRaycasts = false;
-
-        // Opcional: Deixa o pet um pouco transparente enquanto arrasta
-        canvasGroup.alpha = 0.8f;
     }
 
     public void OnDrag(PointerEventData eventData)
     {
-        // Substituímos o Input.mousePosition pela posição nativa do evento de UI
         transform.position = eventData.position;
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        // 1. Define o novo pai (se caiu num DropSlot, o parentAfterDrag terá mudado; senão, volta pro original)
+        // 2. No final, ele volta para o parentAfterDrag. 
+        // Se ele foi solto no vazio, o parentAfterDrag ainda é o slot da loja!
         transform.SetParent(parentAfterDrag);
 
-        // 2. Reativa o raycast e a opacidade
+        // 3. Zera a posição para ele encaixar centralizado no slot
+        transform.localPosition = Vector3.zero;
+
         canvasGroup.blocksRaycasts = true;
-        canvasGroup.alpha = 1f;
     }
 }

@@ -3,9 +3,16 @@ using System.Collections.Generic;
 
 public class ShopManager : MonoBehaviour
 {
-    public List<EntityData> todosOsPets; // Arraste os 3 ScriptableObjects aqui no Inspetor
-    public Transform[] slotsDaLoja;
-    public GameObject petPrefab;
+    [Header("Bancos de Dados Locais")]
+    public List<EntityData> poolDePets;     // Arraste APENAS os Pets para cá
+    public List<EntityData> poolDeComidas;  // Arraste APENAS as Comidas para cá
+
+    [Header("Locais na UI")]
+    public Transform[] slotsDePets;         // Arraste os Slots de Pet aqui
+    public Transform[] slotsDeComidas;      // Arraste os Slots de Comida aqui
+
+    [Header("Configurações")]
+    public GameObject petPrefab;            // O Prefab universal que usamos para os dois
 
     public void RoletarLoja()
     {
@@ -13,28 +20,52 @@ public class ShopManager : MonoBehaviour
         {
             EconomyManager.Instance.GastarOuro(1);
 
-            foreach (Transform slot in slotsDaLoja)
+            // 1. Enche a prateleira de PETS
+            foreach (Transform slot in slotsDePets)
             {
-                if (slot.childCount > 0) Destroy(slot.GetChild(0).gameObject);
-
-                EntityData sorteado = todosOsPets[Random.Range(0, todosOsPets.Count)];
-
-                // Instancia o pet como filho do slot
-                GameObject novoPet = Instantiate(petPrefab, slot);
-
-                // --- O PULO DO GATO ESTÁ AQUI ---
-                RectTransform rt = novoPet.GetComponent<RectTransform>();
-                if (rt != null)
+                LimparSlot(slot);
+                if (poolDePets.Count > 0)
                 {
-                    rt.localPosition = Vector3.zero; // Zera a posição relativa ao slot
-                    rt.localScale = Vector3.one;     // Garante que o tamanho seja 100%
-
-                    // Opcional: Garante que ele preencha o slot se os anchors estiverem corretos
-                    rt.anchoredPosition = Vector2.zero;
+                    EntityData sorteado = poolDePets[Random.Range(0, poolDePets.Count)];
+                    InstanciarEntidade(sorteado, slot);
                 }
+            }
 
-                novoPet.GetComponent<PetDisplay>().Setup(sorteado);
+            // 2. Enche a prateleira de COMIDAS
+            foreach (Transform slot in slotsDeComidas)
+            {
+                LimparSlot(slot);
+                if (poolDeComidas.Count > 0)
+                {
+                    EntityData sorteado = poolDeComidas[Random.Range(0, poolDeComidas.Count)];
+                    InstanciarEntidade(sorteado, slot);
+                }
             }
         }
+        else
+        {
+            Debug.Log("Sem dinheiro para roletar a loja!");
+        }
+    }
+
+    // Função auxiliar para evitar repetição de código
+    private void LimparSlot(Transform slot)
+    {
+        if (slot.childCount > 0) Destroy(slot.GetChild(0).gameObject);
+    }
+
+    // Função auxiliar para instanciar e centralizar
+    private void InstanciarEntidade(EntityData dado, Transform slot)
+    {
+        GameObject novaEntidade = Instantiate(petPrefab, slot);
+
+        RectTransform rt = novaEntidade.GetComponent<RectTransform>();
+        if (rt != null)
+        {
+            rt.localPosition = Vector3.zero;
+            rt.localScale = Vector3.one;
+        }
+
+        novaEntidade.GetComponent<PetInstance>().Setup(dado);
     }
 }

@@ -166,6 +166,7 @@ GameObject:
   - component: {fileID: 4144883279490242574}
   - component: {fileID: 6173707289961512513}
   - component: {fileID: 4257533397523487100}
+  - component: {fileID: 8819546918501232449}
   m_Layer: 0
   m_Name: Pet
   m_TagString: Untagged
@@ -271,6 +272,23 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &8819546918501232449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3338200173542555751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0115bed0ed62a749a8f40145cd47be1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PetInstance
+  data: {fileID: 0}
+  nivelAtual: 1
+  ataque: 0
+  vida: 0
+  congelado: 0
 --- !u!1 &5383731603693281387
 GameObject:
   m_ObjectHideFlags: 0
