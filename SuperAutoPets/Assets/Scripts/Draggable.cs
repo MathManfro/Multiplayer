@@ -31,8 +31,8 @@ public class Draggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
 
     public void OnDrag(PointerEventData eventData)
     {
-        // Faz o pet seguir exatamente a posição do mouse/dedo
-        transform.position = Input.mousePosition;
+        // Substituímos o Input.mousePosition pela posição nativa do evento de UI
+        transform.position = eventData.position;
     }
 
     public void OnEndDrag(PointerEventData eventData)

@@ -747,7 +747,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d2f5310a28843c498d57741368d785c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSlot
-  isTeamSlot: 0
+  isTeamSlot: 1
 --- !u!1 &612759035
 GameObject:
   m_ObjectHideFlags: 0
@@ -950,6 +950,7 @@ GameObject:
   - component: {fileID: 900058210}
   - component: {fileID: 900058212}
   - component: {fileID: 900058211}
+  - component: {fileID: 900058213}
   m_Layer: 5
   m_Name: Item 2
   m_TagString: Untagged
@@ -989,7 +990,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.050980393}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1014,6 +1015,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 900058209}
   m_CullTransparentMesh: 1
+--- !u!114 &900058213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 900058209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d2f5310a28843c498d57741368d785c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DropSlot
+  isTeamSlot: 0
 --- !u!1 &988109452
 GameObject:
   m_ObjectHideFlags: 0
@@ -1162,6 +1176,7 @@ GameObject:
   - component: {fileID: 1048287762}
   - component: {fileID: 1048287764}
   - component: {fileID: 1048287763}
+  - component: {fileID: 1048287765}
   m_Layer: 5
   m_Name: Item 1
   m_TagString: Untagged
@@ -1201,7 +1216,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.050980393}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1226,6 +1241,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1048287761}
   m_CullTransparentMesh: 1
+--- !u!114 &1048287765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1048287761}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d2f5310a28843c498d57741368d785c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DropSlot
+  isTeamSlot: 0
 --- !u!1 &1179403313
 GameObject:
   m_ObjectHideFlags: 0
@@ -1237,6 +1265,7 @@ GameObject:
   - component: {fileID: 1179403314}
   - component: {fileID: 1179403316}
   - component: {fileID: 1179403315}
+  - component: {fileID: 1179403317}
   m_Layer: 5
   m_Name: Pet 1
   m_TagString: Untagged
@@ -1276,7 +1305,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.050980393}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1301,6 +1330,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1179403313}
   m_CullTransparentMesh: 1
+--- !u!114 &1179403317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1179403313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d2f5310a28843c498d57741368d785c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DropSlot
+  isTeamSlot: 0
 --- !u!1 &1217019982
 GameObject:
   m_ObjectHideFlags: 0
@@ -1709,7 +1751,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d2f5310a28843c498d57741368d785c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSlot
-  isTeamSlot: 0
+  isTeamSlot: 1
 --- !u!1 &1332694364
 GameObject:
   m_ObjectHideFlags: 0
@@ -1792,7 +1834,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1332694367}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1868351960}
+        m_TargetAssemblyTypeName: ShopManager, Assembly-CSharp
+        m_MethodName: RoletarLoja
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1332694367
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1919,7 +1973,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d2f5310a28843c498d57741368d785c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSlot
-  isTeamSlot: 0
+  isTeamSlot: 1
 --- !u!1 &1512220473
 GameObject:
   m_ObjectHideFlags: 0
@@ -1976,6 +2030,7 @@ GameObject:
   - component: {fileID: 1561419063}
   - component: {fileID: 1561419065}
   - component: {fileID: 1561419064}
+  - component: {fileID: 1561419066}
   m_Layer: 5
   m_Name: Pet 2
   m_TagString: Untagged
@@ -2015,7 +2070,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.050980393}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2040,6 +2095,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1561419062}
   m_CullTransparentMesh: 1
+--- !u!114 &1561419066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1561419062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d2f5310a28843c498d57741368d785c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DropSlot
+  isTeamSlot: 0
 --- !u!1 &1661240349
 GameObject:
   m_ObjectHideFlags: 0
@@ -2265,7 +2333,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d2f5310a28843c498d57741368d785c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSlot
-  isTeamSlot: 0
+  isTeamSlot: 1
 --- !u!1 &1713460849
 GameObject:
   m_ObjectHideFlags: 0
@@ -2277,6 +2345,7 @@ GameObject:
   - component: {fileID: 1713460850}
   - component: {fileID: 1713460852}
   - component: {fileID: 1713460851}
+  - component: {fileID: 1713460853}
   m_Layer: 5
   m_Name: Pet 3
   m_TagString: Untagged
@@ -2316,7 +2385,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.050980393}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2341,6 +2410,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1713460849}
   m_CullTransparentMesh: 1
+--- !u!114 &1713460853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1713460849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d2f5310a28843c498d57741368d785c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DropSlot
+  isTeamSlot: 0
 --- !u!1 &1865552977
 GameObject:
   m_ObjectHideFlags: 0
@@ -2429,7 +2511,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d2f5310a28843c498d57741368d785c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSlot
-  isTeamSlot: 0
+  isTeamSlot: 1
 --- !u!1 &1868351958
 GameObject:
   m_ObjectHideFlags: 0
@@ -2472,9 +2554,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c523f22943b66742ab303116e27ab0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Shop_Manager
-  todosOsPets: []
-  slotsDaLoja: []
-  petPrefab: {fileID: 0}
+  todosOsPets:
+  - {fileID: 11400000, guid: 2d59da6f84978254aaaf2276a2739f9c, type: 2}
+  - {fileID: 11400000, guid: 99448da69fd44df409c200726a84e346, type: 2}
+  - {fileID: 11400000, guid: 485ff15cb6ded0e4cb26bf9314f5329d, type: 2}
+  slotsDaLoja:
+  - {fileID: 1179403314}
+  - {fileID: 1561419063}
+  - {fileID: 1713460850}
+  petPrefab: {fileID: 3338200173542555751, guid: c7a7fe39532122446b01e367381507e7, type: 3}
 --- !u!4 &1868351961
 Transform:
   m_ObjectHideFlags: 0

@@ -15,14 +15,24 @@ public class ShopManager : MonoBehaviour
 
             foreach (Transform slot in slotsDaLoja)
             {
-                // Limpa o slot atual
                 if (slot.childCount > 0) Destroy(slot.GetChild(0).gameObject);
 
-                // Sorteia um pet da lista local
                 EntityData sorteado = todosOsPets[Random.Range(0, todosOsPets.Count)];
 
-                // Instancia e configura
+                // Instancia o pet como filho do slot
                 GameObject novoPet = Instantiate(petPrefab, slot);
+
+                // --- O PULO DO GATO ESTÁ AQUI ---
+                RectTransform rt = novoPet.GetComponent<RectTransform>();
+                if (rt != null)
+                {
+                    rt.localPosition = Vector3.zero; // Zera a posição relativa ao slot
+                    rt.localScale = Vector3.one;     // Garante que o tamanho seja 100%
+
+                    // Opcional: Garante que ele preencha o slot se os anchors estiverem corretos
+                    rt.anchoredPosition = Vector2.zero;
+                }
+
                 novoPet.GetComponent<PetDisplay>().Setup(sorteado);
             }
         }

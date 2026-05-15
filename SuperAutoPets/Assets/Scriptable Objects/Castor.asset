@@ -16,5 +16,5 @@ MonoBehaviour:
   nome: Castor
   poderBase: 1
   valor: 1
-  icon: {fileID: 0}
+  icon: {fileID: -1002383828, guid: 5ce04d0bd3eae93409230908ae34964e, type: 3}
   isFood: 0

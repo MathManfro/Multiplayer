@@ -16,5 +16,5 @@ MonoBehaviour:
   nome: Formiga
   poderBase: 2
   valor: 2
-  icon: {fileID: 0}
+  icon: {fileID: 1872257490, guid: 5ce04d0bd3eae93409230908ae34964e, type: 3}
   isFood: 0
