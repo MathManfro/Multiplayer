@@ -1,9 +1,9 @@
 using UnityEngine;
 using System;
 
-public class Economy_Manager : MonoBehaviour
+public class EconomyManager : MonoBehaviour
 {
-    public static Economy_Manager Instance { get; private set; }
+    public static EconomyManager Instance { get; private set; }
 
     [Header("Configurações de Economia")]
     public int ouroInicial = 10;

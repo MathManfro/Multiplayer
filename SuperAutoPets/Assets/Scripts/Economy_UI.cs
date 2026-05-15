@@ -1,7 +1,7 @@
 using UnityEngine;
 using TMPro;
 
-public class Economy_UI : MonoBehaviour
+public class EconomyUI : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI textoOuro;
 

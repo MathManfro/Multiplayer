@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Pet_Instance : MonoBehaviour
+public class PetInstance : MonoBehaviour
 {
     public EntityData data;
     public int nivelAtual = 1;

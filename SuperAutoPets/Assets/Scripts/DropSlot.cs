@@ -9,18 +9,15 @@ public class DropSlot : MonoBehaviour, IDropHandler
         GameObject droppedItem = eventData.pointerDrag;
         Draggable draggableItem = droppedItem.GetComponent<Draggable>();
 
-        if (draggableItem != null)
+        if (pet != null && transform.childCount == 0)
         {
-            // Verifica se o slot está vazio. 
-            // (Futuramente, aqui você adiciona a lógica de fundir pets iguais se já tiver um filho)
-            if (transform.childCount == 0)
-            {
-                // Muda a variável do pet para que, no OnEndDrag, ele assuma este slot como nova casa
-                draggableItem.parentAfterDrag = transform;
+            int custo = (int)pet.data.valor; // Valor vindo do ScriptableObject
 
-                // --- INTEGRAÇÃO COM BANCO/LÓGICA ---
-                // Aqui você chamaria o ShopManager para verificar se o jogador tem Ouro suficiente.
-                // Se tiver, subtrai o ouro e salva a ação refletindo a tabela COMPRAS.
+            if (EconomyManager.Instance.PodeGastar(custo))
+            {
+                EconomyManager.Instance.GastarOuro(custo);
+                pet.GetComponent<Draggable>().parentAfterDrag = transform;
+                // Aqui você desativa a flag de "está na loja" do pet
             }
         }
     }
