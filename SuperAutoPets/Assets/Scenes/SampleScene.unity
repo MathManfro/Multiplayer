@@ -747,6 +747,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d2f5310a28843c498d57741368d785c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSlot
+  isTeamSlot: 0
 --- !u!1 &612759035
 GameObject:
   m_ObjectHideFlags: 0
@@ -1708,6 +1709,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d2f5310a28843c498d57741368d785c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSlot
+  isTeamSlot: 0
 --- !u!1 &1332694364
 GameObject:
   m_ObjectHideFlags: 0
@@ -1744,7 +1746,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -189.99988}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1332694366
@@ -1917,6 +1919,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d2f5310a28843c498d57741368d785c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSlot
+  isTeamSlot: 0
 --- !u!1 &1512220473
 GameObject:
   m_ObjectHideFlags: 0
@@ -2262,6 +2265,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d2f5310a28843c498d57741368d785c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSlot
+  isTeamSlot: 0
 --- !u!1 &1713460849
 GameObject:
   m_ObjectHideFlags: 0
@@ -2425,6 +2429,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d2f5310a28843c498d57741368d785c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DropSlot
+  isTeamSlot: 0
 --- !u!1 &1868351958
 GameObject:
   m_ObjectHideFlags: 0
@@ -2467,11 +2472,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c523f22943b66742ab303116e27ab0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Shop_Manager
-  poolDePets:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  shopSlots: []
+  todosOsPets: []
+  slotsDaLoja: []
   petPrefab: {fileID: 0}
 --- !u!4 &1868351961
 Transform:
@@ -2630,7 +2632,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -278}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2097546659
